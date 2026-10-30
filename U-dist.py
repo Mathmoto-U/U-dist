@@ -500,7 +500,7 @@ st.markdown(
             標本平均が正規分布に収束するシミュレーション（U字型分布）
         </div>
         <p class="sim-subtitle">
-            1～5の整数を100個を抽出し、その標本平均を右のヒストグラムに記録します。
+            1～5の整数を100個抽出し、その標本平均を右のヒストグラムに記録します。
             ただし、今回の母集団分布はU字型です。
         </p>
     </div>
@@ -572,7 +572,7 @@ with col_left:
 
         # 3. 標本そのもののヒストグラム（1〜5の出現個数）
         st.markdown(
-            '<div class="sub-hist-title">今回の標本（100個）の度数分布</div>',
+            '<div class="sub-hist-title">この標本の度数分布</div>',
             unsafe_allow_html=True,
         )
         sample_fig = create_sample_histogram_figure(
