@@ -397,8 +397,12 @@ def create_mean_histogram_figure(bins: List[Dict]) -> go.Figure:
     range_labels = [b["range_label"] for b in bins]
 
     # 相対度数（Y軸）の上限と目盛りを完全固定
-    y_max = 0.30
-    y_dtick = 0.05
+    y_axis_settings = {
+        0.10: (0.30, 0.05),  # 幅 0.10: 上限 0.30 (0.05刻み)
+        0.05: (0.15, 0.03),  # 幅 0.05: 上限 0.15 (0.03刻み)
+        0.02: (0.06, 0.01),  # 幅 0.02: 上限 0.06 (0.01刻み)
+    }
+    y_max, y_dtick = y_axis_settings.get(w, (0.30, 0.05))
 
     fig = go.Figure()
 
